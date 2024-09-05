@@ -1,0 +1,23 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = djopproject
+	email = djopproject.bst@gmail.com
+[http]
+	postBuffer = 1048576000
+	version = HTTP/1.1
+	lowSpeedLimit = 1000
+	lowSpeedTime = 600
+[pack]
+	window = 1
+	deltaCacheSize = 2047m
+	packSizeLimit = 2047m
+	windowMemory = 2047m
+[core]
+	compression = 0
+	packedGitLimit = 512m
+	packedGitWindowSize = 512m
+	autocrlf = false
